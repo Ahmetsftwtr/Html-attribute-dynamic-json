@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        width:100%;
+        height:100vw;
+        margin:0;
+        background-color: rgb(107, 219, 107);
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    .product_list
+    {
+        width:100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(230, 230, 230, 0.993);
+        padding:10px;
+        gap:10px;
+        flex-wrap: wrap;
+        
+
+
+    }
+    .product_list_item
+    {
+        width: 300px;
+        height:auto;
+        border:1px solid rgb(107, 219, 107);
+        padding:20px;
+        text-align: center;
+        position: relative;
+    }
+    .product_list_item > img
+    {
+        width:120px;
+        height:120px;
+        object-fit: cover;
+    }
+    .product_list_item > .product_name
+    {
+        font-size: 1.2rem;
+    }
+    .product_list_item > button
+    {
+        width: 100%;
+        height:30px;
+        position: absolute;
+        bottom: 0;
+        left:0;
+        background-color: rgb(77, 187, 77);
+        border:none;
+        color:white;
+        cursor: pointer;
+    }
+    .product_list_item > button:hover
+    {
+        background-color: rgb(33, 161, 33);
+
+    }
+</style>
+
+<h1>En Yeni ürünler</h1>
+<div class="product_list" data-url="relatedProducts.json">
+
+</div>
+
+<h1>En çok satanlar</h1>
+<div class="product_list" data-url="bestSeller.json">
+</div>
+
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
